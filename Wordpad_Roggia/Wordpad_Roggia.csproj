@@ -89,5 +89,23 @@
   <ItemGroup>
     <None Include="Resources\FormatSelection_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96px-WordPad_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_grey_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_grey_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpApplication_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InformationSymbol_16x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

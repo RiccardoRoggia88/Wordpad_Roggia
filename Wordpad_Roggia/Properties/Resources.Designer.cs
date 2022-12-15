@@ -63,6 +63,16 @@ namespace Wordpad_Roggia.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _96px_WordPad_icon {
+            get {
+                object obj = ResourceManager.GetObject("96px-WordPad_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_grey_16x {
             get {
                 object obj = ResourceManager.GetObject("Edit_grey_16x", resourceCulture);
@@ -86,6 +96,56 @@ namespace Wordpad_Roggia.Properties {
         internal static System.Drawing.Bitmap FormatSelection_16x {
             get {
                 object obj = ResourceManager.GetObject("FormatSelection_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HelpApplication_16x {
+            get {
+                object obj = ResourceManager.GetObject("HelpApplication_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InformationSymbol_16x {
+            get {
+                object obj = ResourceManager.GetObject("InformationSymbol_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Redo_grey_16x {
+            get {
+                object obj = ResourceManager.GetObject("Redo_grey_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_16x {
+            get {
+                object obj = ResourceManager.GetObject("Save_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_grey_16x {
+            get {
+                object obj = ResourceManager.GetObject("Undo_grey_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

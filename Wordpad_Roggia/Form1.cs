@@ -16,7 +16,22 @@ namespace Wordpad_Roggia
         {
             InitializeComponent();
         }
+        //1MenuTOolStrip
+        private void sALVAToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            salva();
+        }
 
+        private void uNDOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void rIPETIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Redo();
+        }
+        //2MenuTooStrip
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FontDialog fnt = new FontDialog();
@@ -30,6 +45,12 @@ namespace Wordpad_Roggia
             if (fnt.ShowDialog() == DialogResult.OK)
                 richTextBox1.ForeColor = fnt.Color;
         }
+        private void backColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog fnt = new ColorDialog();
+            if (fnt.ShowDialog() == DialogResult.OK)
+                richTextBox1.BackColor = fnt.Color;
+        }
 
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -38,37 +59,22 @@ namespace Wordpad_Roggia
 
         private void apriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog of = new OpenFileDialog();
-            of.Title = "Open";
-            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
-            if (of.ShowDialog() == DialogResult.OK)
-                richTextBox1.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
-            this.Text = of.FileName;
+            apri();
         }
-
+        
         private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog of = new SaveFileDialog();
-            of.Title = "Save";
-            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
-            if (of.ShowDialog() == DialogResult.OK)
-                richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
-            this.Text = of.FileName;
+            salva();
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog of = new SaveFileDialog();
-            of.Title = "Save";
-            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
-            if (of.ShowDialog() == DialogResult.OK)
-                richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
-            this.Text = of.FileName;
+            salva();
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            esci();
         }
 
         private void annullaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,5 +106,62 @@ namespace Wordpad_Roggia
         {
             richTextBox1.SelectAll();
         }
+        //ChiusuraForm
+        private void frmWordPad_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            esci();
+        }
+        //Metodi vari
+        public void apri()
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Title = "Open";
+            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
+            if (of.ShowDialog() == DialogResult.OK)
+                richTextBox1.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = of.FileName;
+        }
+        public void esci()
+        {
+            if (richTextBox1.Text != "")
+            {
+                DialogResult ris;
+                ris = MessageBox.Show("VUOI SALVARE?", "SALVATAGGIO DATI",
+                                        MessageBoxButtons.YesNo);
+                if (ris == DialogResult.Yes)
+                    salva();
+            }
+        }
+        public void salva()
+        {
+            SaveFileDialog of = new SaveFileDialog();
+            of.Title = "Save";
+            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
+            if (of.ShowDialog() == DialogResult.OK)
+                richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
+            this.Text = of.FileName;
+        }
+        //Toolstrip
+        private void copiaToolStripButton_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
+
+        private void incollaToolStripButton_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+
+        private void tagliaToolStripButton_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+       
     }
 }
