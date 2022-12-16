@@ -177,10 +177,29 @@ namespace Wordpad_Roggia
         {
             richTextBox1.SelectionBullet = !richTextBox1.SelectionBullet;
         }
-
+        int valore;
+        bool elenco = true;
         private void btnElencoNumerato_Click(object sender, EventArgs e)
         {
             
+            if (elenco)
+                elenco = false;
+            else
+            {
+                valore = 0;
+                elenco = true;
+            }
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (elenco)
+            {
+                richTextBox1.BulletIndent = 20;
+                richTextBox1.SelectionBullet = false;
+                if (e.KeyChar == (char)Keys.Return)
+                    richTextBox1.SelectedText = valore++ + ".";
+            }
         }
     }
 }
