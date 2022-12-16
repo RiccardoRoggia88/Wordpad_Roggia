@@ -83,6 +83,16 @@ namespace Wordpad_Roggia.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bold_16x {
+            get {
+                object obj = ResourceManager.GetObject("Bold_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_16x {
             get {
                 object obj = ResourceManager.GetObject("Copy_16x", resourceCulture);

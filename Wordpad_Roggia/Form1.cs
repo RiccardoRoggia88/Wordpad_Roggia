@@ -182,24 +182,55 @@ namespace Wordpad_Roggia
         private void btnElencoNumerato_Click(object sender, EventArgs e)
         {
             
-            if (elenco)
-                elenco = false;
-            else
-            {
-                valore = 0;
-                elenco = true;
-            }
+            //if (elenco)
+            //    elenco = false;
+            //else
+            //{
+            //    valore = 0;
+            //    elenco = true;
+            //}
         }
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (elenco)
+            //if (elenco)
+            //{
+            //    richTextBox1.BulletIndent = 20;
+            //    richTextBox1.SelectionBullet = false;
+            //    if (e.KeyChar == (char)Keys.Return)
+            //        richTextBox1.SelectedText = valore++ + ".";
+            //}
+        }
+
+        private void btnFontBold_Click(object sender, EventArgs e)
+        {
+             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+        }
+
+        private void chkBold_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBold.Checked)
             {
-                richTextBox1.BulletIndent = 20;
-                richTextBox1.SelectionBullet = false;
-                if (e.KeyChar == (char)Keys.Return)
-                    richTextBox1.SelectedText = valore++ + ".";
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
             }
+            else
+            {
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+        }
+
+        private void chkBold_CheckStateChanged(object sender, EventArgs e)
+        {
+            //string image1 = "Cut_16x.png";
+            //switch (chkBold.CheckState)
+            //{
+            //    case CheckState.Checked:
+            //        chkBold.Image = image1;
+            //        break;
+            //    case CheckState.Unchecked:
+            //        chkBold.Image = UnCheckedImage;
+            //        break;
+            //}
         }
     }
 }
