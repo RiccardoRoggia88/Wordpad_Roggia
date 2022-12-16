@@ -141,27 +141,46 @@ namespace Wordpad_Roggia
                 richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
             this.Text = of.FileName;
         }
-        //Toolstrip
-        private void copiaToolStripButton_Click(object sender, EventArgs e)
-        {
-            richTextBox1.Copy();
-        }
 
-        private void incollaToolStripButton_Click(object sender, EventArgs e)
+        //PANNELLO
+        private void btnIncolla_Click(object sender, EventArgs e)
         {
             richTextBox1.Paste();
         }
 
-        private void tagliaToolStripButton_Click(object sender, EventArgs e)
+        private void btnTaglia_Click(object sender, EventArgs e)
         {
             richTextBox1.Cut();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void btnCopia_Click(object sender, EventArgs e)
         {
-
+            richTextBox1.Copy();
         }
 
-       
+        private void btnAlignLeft_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void btnAlignCenter_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void btnAlineRight_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void btnElencoPuntato_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBullet = !richTextBox1.SelectionBullet;
+        }
+
+        private void btnElencoNumerato_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

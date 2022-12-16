@@ -107,5 +107,29 @@
   <ItemGroup>
     <None Include="Resources\InformationSymbol_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASX_Paste_blue_32x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextLeftJustify_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextCenter_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextRightJustify_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElencoPuntato16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ElencoNumerato16x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
