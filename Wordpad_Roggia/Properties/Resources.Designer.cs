@@ -93,6 +93,16 @@ namespace Wordpad_Roggia.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ColorPicker_16x {
+            get {
+                object obj = ResourceManager.GetObject("ColorPicker_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_16x {
             get {
                 object obj = ResourceManager.GetObject("Copy_16x", resourceCulture);
@@ -183,6 +193,16 @@ namespace Wordpad_Roggia.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Italic_16x {
+            get {
+                object obj = ResourceManager.GetObject("Italic_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Redo_grey_16x {
             get {
                 object obj = ResourceManager.GetObject("Redo_grey_16x", resourceCulture);
@@ -196,6 +216,16 @@ namespace Wordpad_Roggia.Properties {
         internal static System.Drawing.Bitmap Save_16x {
             get {
                 object obj = ResourceManager.GetObject("Save_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StrikeThrough_16x {
+            get {
+                object obj = ResourceManager.GetObject("StrikeThrough_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,26 @@ namespace Wordpad_Roggia.Properties {
         internal static System.Drawing.Bitmap TextRightJustify_16x {
             get {
                 object obj = ResourceManager.GetObject("TextRightJustify_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Underline_16x {
+            get {
+                object obj = ResourceManager.GetObject("Underline_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Underline_16x1 {
+            get {
+                object obj = ResourceManager.GetObject("Underline_16x1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

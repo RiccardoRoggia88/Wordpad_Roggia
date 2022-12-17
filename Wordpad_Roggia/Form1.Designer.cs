@@ -32,21 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWordPad));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlRoggia = new System.Windows.Forms.Panel();
-            this.btnFontBold = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.chkBold = new System.Windows.Forms.CheckBox();
-            this.btnElencoNumerato = new System.Windows.Forms.Button();
-            this.btnElencoPuntato = new System.Windows.Forms.Button();
-            this.btnAlignLeft = new System.Windows.Forms.Button();
-            this.btnAlignCenter = new System.Windows.Forms.Button();
-            this.btnAlineRight = new System.Windows.Forms.Button();
-            this.btnCopia = new System.Windows.Forms.Button();
-            this.btnTaglia = new System.Windows.Forms.Button();
-            this.btnIncolla = new System.Windows.Forms.Button();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nuovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,13 +56,31 @@
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.iMGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sALVAToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.uNDOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.rIPETIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlRoggia = new System.Windows.Forms.Panel();
+            this.chkBold = new System.Windows.Forms.CheckBox();
+            this.chkStriked = new System.Windows.Forms.CheckBox();
+            this.chkUnderline = new System.Windows.Forms.CheckBox();
+            this.chkItalic = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnElencoNumerato = new System.Windows.Forms.Button();
+            this.btnElencoPuntato = new System.Windows.Forms.Button();
+            this.btnAlignLeft = new System.Windows.Forms.Button();
+            this.btnAlignCenter = new System.Windows.Forms.Button();
+            this.btnAlineRight = new System.Windows.Forms.Button();
+            this.btnCopia = new System.Windows.Forms.Button();
+            this.btnTaglia = new System.Windows.Forms.Button();
+            this.btnIncolla = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -103,178 +106,12 @@
             this.fileToolStripMenuItem1,
             this.modificaToolStripMenuItem,
             this.formatToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1147, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1147, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iMGToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1147, 30);
-            this.menuStrip2.TabIndex = 4;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(27, 26);
-            this.toolStripMenuItem1.Text = "|";
-            // 
-            // pnlRoggia
-            // 
-            this.pnlRoggia.Controls.Add(this.chkBold);
-            this.pnlRoggia.Controls.Add(this.btnFontBold);
-            this.pnlRoggia.Controls.Add(this.btnElencoNumerato);
-            this.pnlRoggia.Controls.Add(this.btnElencoPuntato);
-            this.pnlRoggia.Controls.Add(this.btnAlignLeft);
-            this.pnlRoggia.Controls.Add(this.btnAlignCenter);
-            this.pnlRoggia.Controls.Add(this.btnAlineRight);
-            this.pnlRoggia.Controls.Add(this.btnCopia);
-            this.pnlRoggia.Controls.Add(this.btnTaglia);
-            this.pnlRoggia.Controls.Add(this.btnIncolla);
-            this.pnlRoggia.Location = new System.Drawing.Point(0, 68);
-            this.pnlRoggia.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlRoggia.Name = "pnlRoggia";
-            this.pnlRoggia.Size = new System.Drawing.Size(1147, 97);
-            this.pnlRoggia.TabIndex = 5;
-            // 
-            // btnFontBold
-            // 
-            this.btnFontBold.Location = new System.Drawing.Point(373, 49);
-            this.btnFontBold.Name = "btnFontBold";
-            this.btnFontBold.Size = new System.Drawing.Size(75, 23);
-            this.btnFontBold.TabIndex = 6;
-            this.btnFontBold.Text = "BOLD";
-            this.btnFontBold.UseVisualStyleBackColor = true;
-            this.btnFontBold.Click += new System.EventHandler(this.btnFontBold_Click);
-            // 
-            // chkBold
-            // 
-            this.chkBold.AutoSize = true;
-            this.chkBold.Image = global::Wordpad_Roggia.Properties.Resources.Bold_16x;
-            this.chkBold.Location = new System.Drawing.Point(373, 14);
-            this.chkBold.Name = "chkBold";
-            this.chkBold.Size = new System.Drawing.Size(34, 17);
-            this.chkBold.TabIndex = 8;
-            this.chkBold.UseVisualStyleBackColor = true;
-            this.chkBold.CheckedChanged += new System.EventHandler(this.chkBold_CheckedChanged);
-            this.chkBold.CheckStateChanged += new System.EventHandler(this.chkBold_CheckStateChanged);
-            // 
-            // btnElencoNumerato
-            // 
-            this.btnElencoNumerato.Image = global::Wordpad_Roggia.Properties.Resources.ElencoNumerato16x;
-            this.btnElencoNumerato.Location = new System.Drawing.Point(255, 14);
-            this.btnElencoNumerato.Margin = new System.Windows.Forms.Padding(4);
-            this.btnElencoNumerato.Name = "btnElencoNumerato";
-            this.btnElencoNumerato.Size = new System.Drawing.Size(33, 28);
-            this.btnElencoNumerato.TabIndex = 7;
-            this.btnElencoNumerato.UseVisualStyleBackColor = true;
-            this.btnElencoNumerato.Click += new System.EventHandler(this.btnElencoNumerato_Click);
-            // 
-            // btnElencoPuntato
-            // 
-            this.btnElencoPuntato.Image = global::Wordpad_Roggia.Properties.Resources.ElencoPuntato16x;
-            this.btnElencoPuntato.Location = new System.Drawing.Point(215, 14);
-            this.btnElencoPuntato.Margin = new System.Windows.Forms.Padding(4);
-            this.btnElencoPuntato.Name = "btnElencoPuntato";
-            this.btnElencoPuntato.Size = new System.Drawing.Size(32, 28);
-            this.btnElencoPuntato.TabIndex = 6;
-            this.btnElencoPuntato.UseVisualStyleBackColor = true;
-            this.btnElencoPuntato.Click += new System.EventHandler(this.btnElencoPuntato_Click);
-            // 
-            // btnAlignLeft
-            // 
-            this.btnAlignLeft.Image = global::Wordpad_Roggia.Properties.Resources.TextLeftJustify_16x;
-            this.btnAlignLeft.Location = new System.Drawing.Point(213, 49);
-            this.btnAlignLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAlignLeft.Name = "btnAlignLeft";
-            this.btnAlignLeft.Size = new System.Drawing.Size(31, 28);
-            this.btnAlignLeft.TabIndex = 5;
-            this.btnAlignLeft.UseVisualStyleBackColor = true;
-            this.btnAlignLeft.Click += new System.EventHandler(this.btnAlignLeft_Click);
-            // 
-            // btnAlignCenter
-            // 
-            this.btnAlignCenter.Image = global::Wordpad_Roggia.Properties.Resources.TextCenter_16x;
-            this.btnAlignCenter.Location = new System.Drawing.Point(255, 49);
-            this.btnAlignCenter.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAlignCenter.Name = "btnAlignCenter";
-            this.btnAlignCenter.Size = new System.Drawing.Size(36, 28);
-            this.btnAlignCenter.TabIndex = 4;
-            this.btnAlignCenter.UseVisualStyleBackColor = true;
-            this.btnAlignCenter.Click += new System.EventHandler(this.btnAlignCenter_Click);
-            // 
-            // btnAlineRight
-            // 
-            this.btnAlineRight.Image = global::Wordpad_Roggia.Properties.Resources.TextRightJustify_16x;
-            this.btnAlineRight.Location = new System.Drawing.Point(299, 49);
-            this.btnAlineRight.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAlineRight.Name = "btnAlineRight";
-            this.btnAlineRight.Size = new System.Drawing.Size(33, 28);
-            this.btnAlineRight.TabIndex = 3;
-            this.btnAlineRight.UseVisualStyleBackColor = true;
-            this.btnAlineRight.Click += new System.EventHandler(this.btnAlineRight_Click);
-            // 
-            // btnCopia
-            // 
-            this.btnCopia.Image = global::Wordpad_Roggia.Properties.Resources.Copy_16x;
-            this.btnCopia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCopia.Location = new System.Drawing.Point(101, 49);
-            this.btnCopia.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCopia.Name = "btnCopia";
-            this.btnCopia.Size = new System.Drawing.Size(80, 28);
-            this.btnCopia.TabIndex = 2;
-            this.btnCopia.Text = "Copia";
-            this.btnCopia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCopia.UseVisualStyleBackColor = true;
-            this.btnCopia.Click += new System.EventHandler(this.btnCopia_Click);
-            // 
-            // btnTaglia
-            // 
-            this.btnTaglia.Image = global::Wordpad_Roggia.Properties.Resources.Cut_16x;
-            this.btnTaglia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaglia.Location = new System.Drawing.Point(101, 14);
-            this.btnTaglia.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTaglia.Name = "btnTaglia";
-            this.btnTaglia.Size = new System.Drawing.Size(80, 28);
-            this.btnTaglia.TabIndex = 1;
-            this.btnTaglia.Text = "Taglia";
-            this.btnTaglia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTaglia.UseVisualStyleBackColor = true;
-            this.btnTaglia.Click += new System.EventHandler(this.btnTaglia_Click);
-            // 
-            // btnIncolla
-            // 
-            this.btnIncolla.Image = global::Wordpad_Roggia.Properties.Resources.ASX_Paste_blue_32x;
-            this.btnIncolla.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnIncolla.Location = new System.Drawing.Point(20, 14);
-            this.btnIncolla.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIncolla.Name = "btnIncolla";
-            this.btnIncolla.Size = new System.Drawing.Size(73, 76);
-            this.btnIncolla.TabIndex = 0;
-            this.btnIncolla.Tag = "Incolla";
-            this.btnIncolla.Text = "Incolla";
-            this.btnIncolla.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnIncolla.UseVisualStyleBackColor = true;
-            this.btnIncolla.Click += new System.EventHandler(this.btnIncolla_Click);
             // 
             // fileToolStripMenuItem1
             // 
@@ -295,7 +132,7 @@
             this.fileToolStripMenuItem1.Image = global::Wordpad_Roggia.Properties.Resources.FileHead_16x;
             this.fileToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(66, 26);
+            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(66, 24);
             this.fileToolStripMenuItem1.Text = "&File";
             // 
             // nuovoToolStripMenuItem
@@ -390,7 +227,7 @@
             this.modificaToolStripMenuItem.Image = global::Wordpad_Roggia.Properties.Resources.Edit_grey_16x;
             this.modificaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
-            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.modificaToolStripMenuItem.Text = "&Edit";
             // 
             // annullaToolStripMenuItem
@@ -465,7 +302,7 @@
             this.formatToolStripMenuItem.Image = global::Wordpad_Roggia.Properties.Resources.FormatSelection_16x;
             this.formatToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
-            this.formatToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.formatToolStripMenuItem.Text = "&Format";
             // 
             // fontToolStripMenuItem
@@ -489,12 +326,41 @@
             this.backColorToolStripMenuItem.Text = "BackColor";
             this.backColorToolStripMenuItem.Click += new System.EventHandler(this.backColorToolStripMenuItem_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iMGToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1147, 28);
+            this.menuStrip2.TabIndex = 4;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
             // iMGToolStripMenuItem
             // 
             this.iMGToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.iMGToolStripMenuItem.Image = global::Wordpad_Roggia.Properties.Resources._96px_WordPad_icon;
             this.iMGToolStripMenuItem.Name = "iMGToolStripMenuItem";
-            this.iMGToolStripMenuItem.Size = new System.Drawing.Size(34, 26);
+            this.iMGToolStripMenuItem.Size = new System.Drawing.Size(34, 24);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(27, 24);
+            this.toolStripMenuItem1.Text = "|";
             // 
             // toolStripMenuItem2
             // 
@@ -502,7 +368,7 @@
             this.sALVAToolStripMenuItem1});
             this.toolStripMenuItem2.Image = global::Wordpad_Roggia.Properties.Resources.Save_16x;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(34, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(34, 24);
             // 
             // sALVAToolStripMenuItem1
             // 
@@ -517,7 +383,7 @@
             this.uNDOToolStripMenuItem});
             this.toolStripMenuItem3.Image = global::Wordpad_Roggia.Properties.Resources.Undo_grey_16x;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(34, 26);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(34, 24);
             // 
             // uNDOToolStripMenuItem
             // 
@@ -532,7 +398,7 @@
             this.rIPETIToolStripMenuItem});
             this.toolStripMenuItem4.Image = global::Wordpad_Roggia.Properties.Resources.Redo_grey_16x;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(34, 26);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(34, 24);
             // 
             // rIPETIToolStripMenuItem
             // 
@@ -540,6 +406,188 @@
             this.rIPETIToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.rIPETIToolStripMenuItem.Text = "RIPRISTINA";
             this.rIPETIToolStripMenuItem.Click += new System.EventHandler(this.rIPETIToolStripMenuItem_Click);
+            // 
+            // pnlRoggia
+            // 
+            this.pnlRoggia.Controls.Add(this.chkBold);
+            this.pnlRoggia.Controls.Add(this.chkStriked);
+            this.pnlRoggia.Controls.Add(this.chkUnderline);
+            this.pnlRoggia.Controls.Add(this.chkItalic);
+            this.pnlRoggia.Controls.Add(this.button1);
+            this.pnlRoggia.Controls.Add(this.btnElencoNumerato);
+            this.pnlRoggia.Controls.Add(this.btnElencoPuntato);
+            this.pnlRoggia.Controls.Add(this.btnAlignLeft);
+            this.pnlRoggia.Controls.Add(this.btnAlignCenter);
+            this.pnlRoggia.Controls.Add(this.btnAlineRight);
+            this.pnlRoggia.Controls.Add(this.btnCopia);
+            this.pnlRoggia.Controls.Add(this.btnTaglia);
+            this.pnlRoggia.Controls.Add(this.btnIncolla);
+            this.pnlRoggia.Location = new System.Drawing.Point(0, 68);
+            this.pnlRoggia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRoggia.Name = "pnlRoggia";
+            this.pnlRoggia.Size = new System.Drawing.Size(1147, 97);
+            this.pnlRoggia.TabIndex = 5;
+            // 
+            // chkBold
+            // 
+            this.chkBold.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkBold.AutoSize = true;
+            this.chkBold.Image = global::Wordpad_Roggia.Properties.Resources.Bold_16x;
+            this.chkBold.Location = new System.Drawing.Point(375, 49);
+            this.chkBold.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkBold.Name = "chkBold";
+            this.chkBold.Size = new System.Drawing.Size(22, 22);
+            this.chkBold.TabIndex = 13;
+            this.chkBold.UseVisualStyleBackColor = true;
+            this.chkBold.CheckedChanged += new System.EventHandler(this.chkBold_CheckedChanged);
+            // 
+            // chkStriked
+            // 
+            this.chkStriked.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkStriked.AutoSize = true;
+            this.chkStriked.Image = global::Wordpad_Roggia.Properties.Resources.StrikeThrough_16x;
+            this.chkStriked.Location = new System.Drawing.Point(433, 50);
+            this.chkStriked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkStriked.Name = "chkStriked";
+            this.chkStriked.Size = new System.Drawing.Size(22, 22);
+            this.chkStriked.TabIndex = 12;
+            this.chkStriked.UseVisualStyleBackColor = true;
+            this.chkStriked.CheckedChanged += new System.EventHandler(this.chkStriked_CheckedChanged);
+            // 
+            // chkUnderline
+            // 
+            this.chkUnderline.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkUnderline.AutoSize = true;
+            this.chkUnderline.Image = global::Wordpad_Roggia.Properties.Resources.Underline_16x1;
+            this.chkUnderline.Location = new System.Drawing.Point(461, 49);
+            this.chkUnderline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkUnderline.Name = "chkUnderline";
+            this.chkUnderline.Size = new System.Drawing.Size(22, 22);
+            this.chkUnderline.TabIndex = 11;
+            this.chkUnderline.UseVisualStyleBackColor = true;
+            this.chkUnderline.CheckedChanged += new System.EventHandler(this.chkUnderline_CheckedChanged);
+            // 
+            // chkItalic
+            // 
+            this.chkItalic.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkItalic.AutoSize = true;
+            this.chkItalic.Image = global::Wordpad_Roggia.Properties.Resources.Italic_16x;
+            this.chkItalic.Location = new System.Drawing.Point(405, 50);
+            this.chkItalic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkItalic.Name = "chkItalic";
+            this.chkItalic.Size = new System.Drawing.Size(22, 22);
+            this.chkItalic.TabIndex = 10;
+            this.chkItalic.UseVisualStyleBackColor = true;
+            this.chkItalic.CheckedChanged += new System.EventHandler(this.chkItalic_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Wordpad_Roggia.Properties.Resources.ColorPicker_16x;
+            this.button1.Location = new System.Drawing.Point(407, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 28);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnElencoNumerato
+            // 
+            this.btnElencoNumerato.Image = global::Wordpad_Roggia.Properties.Resources.ElencoNumerato16x;
+            this.btnElencoNumerato.Location = new System.Drawing.Point(255, 14);
+            this.btnElencoNumerato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnElencoNumerato.Name = "btnElencoNumerato";
+            this.btnElencoNumerato.Size = new System.Drawing.Size(33, 28);
+            this.btnElencoNumerato.TabIndex = 7;
+            this.btnElencoNumerato.UseVisualStyleBackColor = true;
+            this.btnElencoNumerato.Click += new System.EventHandler(this.btnElencoNumerato_Click);
+            // 
+            // btnElencoPuntato
+            // 
+            this.btnElencoPuntato.Image = global::Wordpad_Roggia.Properties.Resources.ElencoPuntato16x;
+            this.btnElencoPuntato.Location = new System.Drawing.Point(215, 14);
+            this.btnElencoPuntato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnElencoPuntato.Name = "btnElencoPuntato";
+            this.btnElencoPuntato.Size = new System.Drawing.Size(32, 28);
+            this.btnElencoPuntato.TabIndex = 6;
+            this.btnElencoPuntato.UseVisualStyleBackColor = true;
+            this.btnElencoPuntato.Click += new System.EventHandler(this.btnElencoPuntato_Click);
+            // 
+            // btnAlignLeft
+            // 
+            this.btnAlignLeft.Image = global::Wordpad_Roggia.Properties.Resources.TextLeftJustify_16x;
+            this.btnAlignLeft.Location = new System.Drawing.Point(213, 49);
+            this.btnAlignLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlignLeft.Name = "btnAlignLeft";
+            this.btnAlignLeft.Size = new System.Drawing.Size(31, 28);
+            this.btnAlignLeft.TabIndex = 5;
+            this.btnAlignLeft.UseVisualStyleBackColor = true;
+            this.btnAlignLeft.Click += new System.EventHandler(this.btnAlignLeft_Click);
+            // 
+            // btnAlignCenter
+            // 
+            this.btnAlignCenter.Image = global::Wordpad_Roggia.Properties.Resources.TextCenter_16x;
+            this.btnAlignCenter.Location = new System.Drawing.Point(255, 49);
+            this.btnAlignCenter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlignCenter.Name = "btnAlignCenter";
+            this.btnAlignCenter.Size = new System.Drawing.Size(36, 28);
+            this.btnAlignCenter.TabIndex = 4;
+            this.btnAlignCenter.UseVisualStyleBackColor = true;
+            this.btnAlignCenter.Click += new System.EventHandler(this.btnAlignCenter_Click);
+            // 
+            // btnAlineRight
+            // 
+            this.btnAlineRight.Image = global::Wordpad_Roggia.Properties.Resources.TextRightJustify_16x;
+            this.btnAlineRight.Location = new System.Drawing.Point(299, 49);
+            this.btnAlineRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlineRight.Name = "btnAlineRight";
+            this.btnAlineRight.Size = new System.Drawing.Size(33, 28);
+            this.btnAlineRight.TabIndex = 3;
+            this.btnAlineRight.UseVisualStyleBackColor = true;
+            this.btnAlineRight.Click += new System.EventHandler(this.btnAlineRight_Click);
+            // 
+            // btnCopia
+            // 
+            this.btnCopia.Image = global::Wordpad_Roggia.Properties.Resources.Copy_16x;
+            this.btnCopia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCopia.Location = new System.Drawing.Point(101, 49);
+            this.btnCopia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCopia.Name = "btnCopia";
+            this.btnCopia.Size = new System.Drawing.Size(80, 28);
+            this.btnCopia.TabIndex = 2;
+            this.btnCopia.Text = "Copia";
+            this.btnCopia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCopia.UseVisualStyleBackColor = true;
+            this.btnCopia.Click += new System.EventHandler(this.btnCopia_Click);
+            // 
+            // btnTaglia
+            // 
+            this.btnTaglia.Image = global::Wordpad_Roggia.Properties.Resources.Cut_16x;
+            this.btnTaglia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaglia.Location = new System.Drawing.Point(101, 14);
+            this.btnTaglia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTaglia.Name = "btnTaglia";
+            this.btnTaglia.Size = new System.Drawing.Size(80, 28);
+            this.btnTaglia.TabIndex = 1;
+            this.btnTaglia.Text = "Taglia";
+            this.btnTaglia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaglia.UseVisualStyleBackColor = true;
+            this.btnTaglia.Click += new System.EventHandler(this.btnTaglia_Click);
+            // 
+            // btnIncolla
+            // 
+            this.btnIncolla.Image = global::Wordpad_Roggia.Properties.Resources.ASX_Paste_blue_32x;
+            this.btnIncolla.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnIncolla.Location = new System.Drawing.Point(20, 14);
+            this.btnIncolla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncolla.Name = "btnIncolla";
+            this.btnIncolla.Size = new System.Drawing.Size(73, 76);
+            this.btnIncolla.TabIndex = 0;
+            this.btnIncolla.Tag = "Incolla";
+            this.btnIncolla.Text = "Incolla";
+            this.btnIncolla.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnIncolla.UseVisualStyleBackColor = true;
+            this.btnIncolla.Click += new System.EventHandler(this.btnIncolla_Click);
             // 
             // frmWordPad
             // 
@@ -557,6 +605,7 @@
             this.Name = "frmWordPad";
             this.Text = "WordPad";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmWordPad_FormClosing);
+            this.Load += new System.EventHandler(this.frmWordPad_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -618,7 +667,10 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button btnElencoNumerato;
         private System.Windows.Forms.Button btnElencoPuntato;
-        private System.Windows.Forms.Button btnFontBold;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkStriked;
+        private System.Windows.Forms.CheckBox chkUnderline;
+        private System.Windows.Forms.CheckBox chkItalic;
         private System.Windows.Forms.CheckBox chkBold;
     }
 }

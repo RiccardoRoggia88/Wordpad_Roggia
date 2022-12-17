@@ -16,6 +16,10 @@ namespace Wordpad_Roggia
         {
             InitializeComponent();
         }
+        private void frmWordPad_Load(object sender, EventArgs e)
+        {
+
+        }
         //1MenuTOolStrip
         private void sALVAToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -116,27 +120,27 @@ namespace Wordpad_Roggia
         {
             OpenFileDialog of = new OpenFileDialog();
             of.Title = "Open";
-            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
+            of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
             if (of.ShowDialog() == DialogResult.OK)
                 richTextBox1.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
             this.Text = of.FileName;
         }
         public void esci()
         {
-            if (richTextBox1.Text != "")
-            {
-                DialogResult ris;
-                ris = MessageBox.Show("VUOI SALVARE?", "SALVATAGGIO DATI",
-                                        MessageBoxButtons.YesNo);
-                if (ris == DialogResult.Yes)
-                    salva();
-            }
+                if (richTextBox1.Text != "")
+                {
+                    DialogResult ris;
+                    ris = MessageBox.Show("VUOI SALVARE?", "SALVATAGGIO DATI",
+                                            MessageBoxButtons.YesNo);
+                    if (ris == DialogResult.Yes)
+                        salva();
+                }
         }
         public void salva()
         {
             SaveFileDialog of = new SaveFileDialog();
             of.Title = "Save";
-            of.Filter = "Text Document(*.txt)|*.txt|All files(*.*)|*.*";
+            of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
             if (of.ShowDialog() == DialogResult.OK)
                 richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
             this.Text = of.FileName;
@@ -202,35 +206,85 @@ namespace Wordpad_Roggia
             //}
         }
 
-        private void btnFontBold_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-             richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+            using (ColorDialog colorDialog = new ColorDialog())
+            {
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                {
+                    richTextBox1.SelectionColor = colorDialog.Color;
+                    button1.FlatAppearance.BorderColor = colorDialog.Color;
+                }
+            }
+        }
+
+        private void chkItalic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBold.Checked && chkItalic.Checked)
+            {
+                chkItalic.Checked = false;
+            }
+            else
+            {
+                if (chkItalic.Checked)
+                {
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+                }
+                else
+                {
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                }
+            }
         }
 
         private void chkBold_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBold.Checked)
+            if(chkItalic.Checked && chkBold.Checked)
             {
-                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+                chkBold.Checked = false;
             }
             else
             {
-                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                if (chkBold.Checked)
+                {
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+                }
+                else
+                {
+                    //if (chkItalic.Checked)
+                    //{
+                    //    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+                    //}
+                    //else
+                        richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                }
             }
         }
 
-        private void chkBold_CheckStateChanged(object sender, EventArgs e)
+        private void chkUnderline_CheckedChanged(object sender, EventArgs e)
         {
-            //string image1 = "Cut_16x.png";
-            //switch (chkBold.CheckState)
-            //{
-            //    case CheckState.Checked:
-            //        chkBold.Image = image1;
-            //        break;
-            //    case CheckState.Unchecked:
-            //        chkBold.Image = UnCheckedImage;
-            //        break;
-            //}
+            if (chkItalic.Checked && chkStriked.Checked)
+            {
+                chkUnderline.Checked = false;
+            }
+            else
+            {
+                if (chkBold.Checked)
+                {
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
+                }
+                else if(chkUnderline.Checked)
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
+                else 
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+        }
+
+        private void chkStriked_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
