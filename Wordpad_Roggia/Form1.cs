@@ -221,70 +221,76 @@ namespace Wordpad_Roggia
 
         private void chkItalic_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBold.Checked && chkItalic.Checked)
+            if (chkItalic.Checked)
             {
-                chkItalic.Checked = false;
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+                chkBold.Enabled = false;
+                chkUnderline.Enabled = false;
+                chkStriked.Enabled = false;
             }
             else
             {
-                if (chkItalic.Checked)
-                {
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
-                }
-                else
-                {
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
-                }
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                chkBold.Enabled = true;
+                chkUnderline.Enabled = true;
+                chkStriked.Enabled = true;
             }
         }
 
         private void chkBold_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkItalic.Checked && chkBold.Checked)
+            if (chkBold.Checked)
             {
-                chkBold.Checked = false;
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+                chkUnderline.Enabled = false;
+                chkItalic.Enabled = false;
+                chkStriked.Enabled = false;
             }
             else
             {
-                if (chkBold.Checked)
-                {
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
-                }
-                else
-                {
-                    //if (chkItalic.Checked)
-                    //{
-                    //    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
-                    //}
-                    //else
-                        richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
-                }
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                chkUnderline.Enabled = true;
+                chkItalic.Enabled = true;
+                chkStriked.Enabled = true;
             }
         }
 
         private void chkUnderline_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkItalic.Checked && chkStriked.Checked)
+            if (chkUnderline.Checked)
             {
-                chkUnderline.Checked = false;
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
+                chkBold.Enabled = false;
+                chkItalic.Enabled = false;
+                chkStriked.Enabled = false;
             }
             else
             {
-                if (chkBold.Checked)
-                {
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
-                }
-                else if(chkUnderline.Checked)
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
-                else 
-                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                chkBold.Enabled = true;
+                chkItalic.Enabled = true;
+                chkStriked.Enabled = true;
             }
+               
+
         }
 
         private void chkStriked_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkStriked.Checked)
+            {
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Strikeout);
+                chkBold.Enabled = false;
+                chkItalic.Enabled = false;
+                chkUnderline.Enabled = false;
+            }
+            else
+            {
+                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+                chkBold.Enabled = true;
+                chkItalic.Enabled = true;
+                chkUnderline.Enabled = true;
+            }
         }
     }
 }
