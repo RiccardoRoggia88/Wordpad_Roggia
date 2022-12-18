@@ -67,6 +67,8 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.rIPETIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlRoggia = new System.Windows.Forms.Panel();
+            this.btnDataOra = new System.Windows.Forms.Button();
+            this.btnSelezionaTutto = new System.Windows.Forms.Button();
             this.chkBold = new System.Windows.Forms.CheckBox();
             this.chkStriked = new System.Windows.Forms.CheckBox();
             this.chkUnderline = new System.Windows.Forms.CheckBox();
@@ -82,7 +84,6 @@
             this.btnIncolla = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.pnlRoggia.SuspendLayout();
@@ -92,7 +93,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(0, 134);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(860, 363);
             this.richTextBox1.TabIndex = 0;
@@ -410,7 +411,8 @@
             // 
             // pnlRoggia
             // 
-            this.pnlRoggia.Controls.Add(this.button2);
+            this.pnlRoggia.Controls.Add(this.btnDataOra);
+            this.pnlRoggia.Controls.Add(this.btnSelezionaTutto);
             this.pnlRoggia.Controls.Add(this.chkBold);
             this.pnlRoggia.Controls.Add(this.chkStriked);
             this.pnlRoggia.Controls.Add(this.chkUnderline);
@@ -429,13 +431,33 @@
             this.pnlRoggia.Size = new System.Drawing.Size(860, 79);
             this.pnlRoggia.TabIndex = 5;
             // 
+            // btnDataOra
+            // 
+            this.btnDataOra.Location = new System.Drawing.Point(490, 23);
+            this.btnDataOra.Name = "btnDataOra";
+            this.btnDataOra.Size = new System.Drawing.Size(75, 40);
+            this.btnDataOra.TabIndex = 14;
+            this.btnDataOra.Text = "DATA E ORA";
+            this.btnDataOra.UseVisualStyleBackColor = true;
+            this.btnDataOra.Click += new System.EventHandler(this.btnDataOra_Click);
+            // 
+            // btnSelezionaTutto
+            // 
+            this.btnSelezionaTutto.Location = new System.Drawing.Point(409, 23);
+            this.btnSelezionaTutto.Name = "btnSelezionaTutto";
+            this.btnSelezionaTutto.Size = new System.Drawing.Size(75, 38);
+            this.btnSelezionaTutto.TabIndex = 6;
+            this.btnSelezionaTutto.Text = "SELEZIONA TUTTO";
+            this.btnSelezionaTutto.UseVisualStyleBackColor = true;
+            this.btnSelezionaTutto.Click += new System.EventHandler(this.btnSelezionaTutto_Click);
+            // 
             // chkBold
             // 
             this.chkBold.Appearance = System.Windows.Forms.Appearance.Button;
             this.chkBold.AutoSize = true;
             this.chkBold.Image = global::Wordpad_Roggia.Properties.Resources.Bold_16x;
             this.chkBold.Location = new System.Drawing.Point(281, 40);
-            this.chkBold.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkBold.Margin = new System.Windows.Forms.Padding(2);
             this.chkBold.Name = "chkBold";
             this.chkBold.Size = new System.Drawing.Size(22, 22);
             this.chkBold.TabIndex = 13;
@@ -448,7 +470,7 @@
             this.chkStriked.AutoSize = true;
             this.chkStriked.Image = global::Wordpad_Roggia.Properties.Resources.StrikeThrough_16x;
             this.chkStriked.Location = new System.Drawing.Point(325, 41);
-            this.chkStriked.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkStriked.Margin = new System.Windows.Forms.Padding(2);
             this.chkStriked.Name = "chkStriked";
             this.chkStriked.Size = new System.Drawing.Size(22, 22);
             this.chkStriked.TabIndex = 12;
@@ -461,7 +483,7 @@
             this.chkUnderline.AutoSize = true;
             this.chkUnderline.Image = global::Wordpad_Roggia.Properties.Resources.Underline_16x1;
             this.chkUnderline.Location = new System.Drawing.Point(346, 40);
-            this.chkUnderline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkUnderline.Margin = new System.Windows.Forms.Padding(2);
             this.chkUnderline.Name = "chkUnderline";
             this.chkUnderline.Size = new System.Drawing.Size(22, 22);
             this.chkUnderline.TabIndex = 11;
@@ -474,7 +496,7 @@
             this.chkItalic.AutoSize = true;
             this.chkItalic.Image = global::Wordpad_Roggia.Properties.Resources.Italic_16x;
             this.chkItalic.Location = new System.Drawing.Point(304, 41);
-            this.chkItalic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkItalic.Margin = new System.Windows.Forms.Padding(2);
             this.chkItalic.Name = "chkItalic";
             this.chkItalic.Size = new System.Drawing.Size(22, 22);
             this.chkItalic.TabIndex = 10;
@@ -485,7 +507,7 @@
             // 
             this.button1.Image = global::Wordpad_Roggia.Properties.Resources.ColorPicker_16x;
             this.button1.Location = new System.Drawing.Point(282, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(21, 23);
             this.button1.TabIndex = 9;
@@ -582,15 +604,6 @@
             this.btnIncolla.UseVisualStyleBackColor = true;
             this.btnIncolla.Click += new System.EventHandler(this.btnIncolla_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(409, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 35);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Seleziona Tutto";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // frmWordPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,7 +616,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmWordPad";
             this.Text = "WordPad";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmWordPad_FormClosing);
@@ -674,7 +687,8 @@
         private System.Windows.Forms.CheckBox chkUnderline;
         private System.Windows.Forms.CheckBox chkItalic;
         private System.Windows.Forms.CheckBox chkBold;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSelezionaTutto;
+        private System.Windows.Forms.Button btnDataOra;
     }
 }
 

@@ -12,18 +12,29 @@ namespace Wordpad_Roggia
 {
     public partial class frmWordPad : Form
     {
+        public int numeroCaratteri;
+        public bool salvato = false;
+       
         public frmWordPad()
         {
             InitializeComponent();
         }
         private void frmWordPad_Load(object sender, EventArgs e)
         {
-
+            
+           
+        }
+        public void end()
+        {
+            MessageBox.Show("Numero caratteri: " + richTextBox1.Text.Length);
         }
         //1MenuTOolStrip
         private void sALVAToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            salva();
+            if (richTextBox1.Text.Length > numeroCaratteri || richTextBox1.Text.Length < numeroCaratteri)
+            {
+                salva();
+            }
         }
 
         private void uNDOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,12 +79,14 @@ namespace Wordpad_Roggia
         
         private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salva();
+            if (richTextBox1.Text.Length > numeroCaratteri || richTextBox1.Text.Length < numeroCaratteri)
+                salva();
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salva();
+            if (richTextBox1.Text.Length > numeroCaratteri || richTextBox1.Text.Length < numeroCaratteri)
+                salva();
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,32 +131,63 @@ namespace Wordpad_Roggia
         //Metodi vari
         public void apri()
         {
-            OpenFileDialog of = new OpenFileDialog();
-            of.Title = "Open";
-            of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
-            if (of.ShowDialog() == DialogResult.OK)
-                richTextBox1.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
-            this.Text = of.FileName;
+            OpenFileDialog OpenFile = new OpenFileDialog();
+
+            OpenFile.DefaultExt = "*.rtf";
+            OpenFile.Filter = "RTF Files|*.rtf";
+
+            if (OpenFile.ShowDialog() == DialogResult.OK &&
+               OpenFile.FileName.Length > 0)
+            {
+                richTextBox1.LoadFile(OpenFile.FileName);
+            }
+            
+            //OpenFileDialog of = new OpenFileDialog();
+            //of.Title = "Open";
+            //of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
+            //if (of.ShowDialog() == DialogResult.OK)
+            //    richTextBox1.LoadFile(of.FileName, RichTextBoxStreamType.PlainText);
+            //this.Text = of.FileName;
         }
         public void esci()
         {
-                if (richTextBox1.Text != "")
+            if (richTextBox1.Text != "")
+            {
+                if (richTextBox1.Text.Length > numeroCaratteri || richTextBox1.Text.Length < numeroCaratteri)
                 {
                     DialogResult ris;
                     ris = MessageBox.Show("VUOI SALVARE?", "SALVATAGGIO DATI",
                                             MessageBoxButtons.YesNo);
                     if (ris == DialogResult.Yes)
+                    {
                         salva();
+                    }
+
                 }
+            }
         }
         public void salva()
         {
-            SaveFileDialog of = new SaveFileDialog();
-            of.Title = "Save";
-            of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
-            if (of.ShowDialog() == DialogResult.OK)
-                richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
-            this.Text = of.FileName;
+            SaveFileDialog SaveFile = new SaveFileDialog();
+
+            SaveFile.DefaultExt = "*.rtf";
+            SaveFile.Filter = "RTF Files|*.rtf";
+
+            if (SaveFile.ShowDialog() == DialogResult.OK &&
+               SaveFile.FileName.Length > 0)
+            {
+                richTextBox1.SaveFile(SaveFile.FileName);
+                numeroCaratteri = richTextBox1.Text.Length;
+            }
+            
+            //end();
+            salvato = true;
+            //SaveFileDialog of = new SaveFileDialog();
+            //of.Title = "Save";
+            //of.Filter = "Rtf Document(*.rtf)|*.rtf|All files(*.*)|*.*";
+            //if (of.ShowDialog() == DialogResult.OK)
+            //    richTextBox1.SaveFile(of.FileName, RichTextBoxStreamType.PlainText);
+            //this.Text = of.FileName;
         }
 
         //PANNELLO
@@ -291,6 +335,16 @@ namespace Wordpad_Roggia
                 chkItalic.Enabled = true;
                 chkUnderline.Enabled = true;
             }
+        }
+
+        private void btnSelezionaTutto_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
+
+        private void btnDataOra_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectedText = System.DateTime.Now.ToString();
         }
     }
 }
