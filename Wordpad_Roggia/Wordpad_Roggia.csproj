@@ -149,5 +149,14 @@
   <ItemGroup>
     <None Include="Resources\StrikeThrough_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAll_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DateTimePicker_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundColor_16x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

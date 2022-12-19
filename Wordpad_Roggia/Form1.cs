@@ -60,16 +60,19 @@ namespace Wordpad_Roggia
             if (fnt.ShowDialog() == DialogResult.OK)
                 richTextBox1.ForeColor = fnt.Color;
         }
-        private void backColorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ColorDialog fnt = new ColorDialog();
-            if (fnt.ShowDialog() == DialogResult.OK)
-                richTextBox1.BackColor = fnt.Color;
-        }
 
         private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox1.Clear();
+            if (richTextBox1.Text.Length > numeroCaratteri || richTextBox1.Text.Length < numeroCaratteri)
+            {
+                salva();
+                richTextBox1.Clear();
+            }
+            else
+            {
+                richTextBox1.Clear();
+            }
+
         }
 
         private void apriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -226,30 +229,29 @@ namespace Wordpad_Roggia
             richTextBox1.SelectionBullet = !richTextBox1.SelectionBullet;
         }
         int valore;
-        bool elenco = true;
+        bool elenco = false;
         private void btnElencoNumerato_Click(object sender, EventArgs e)
         {
-            
-            //if (elenco)
-            //    elenco = false;
-            //else
-            //{
-            //    valore = 0;
-            //    elenco = true;
-            //}
+            //per disattivarlo devo ricliccare sul button
+            if (elenco)
+                elenco = false;
+            else
+            {
+                valore = 0;
+                elenco = true;
+            }
         }
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (elenco)
-            //{
-            //    richTextBox1.BulletIndent = 20;
-            //    richTextBox1.SelectionBullet = false;
-            //    if (e.KeyChar == (char)Keys.Return)
-            //        richTextBox1.SelectedText = valore++ + ".";
-            //}
+            if (elenco)
+            {
+                richTextBox1.BulletIndent = 20;
+                richTextBox1.SelectionBullet = false;
+                if (e.KeyChar == (char)Keys.Return)
+                    richTextBox1.SelectedText = valore++ + ".";
+            }
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -258,11 +260,10 @@ namespace Wordpad_Roggia
                 if (colorDialog.ShowDialog() == DialogResult.OK)
                 {
                     richTextBox1.SelectionColor = colorDialog.Color;
-                    button1.FlatAppearance.BorderColor = colorDialog.Color;
+                    btnColorText.FlatAppearance.BorderColor = colorDialog.Color;
                 }
             }
         }
-
         private void chkItalic_CheckedChanged(object sender, EventArgs e)
         {
             if (chkItalic.Checked)
@@ -346,5 +347,7 @@ namespace Wordpad_Roggia
         {
             richTextBox1.SelectedText = System.DateTime.Now.ToString();
         }
+
+        
     }
 }
