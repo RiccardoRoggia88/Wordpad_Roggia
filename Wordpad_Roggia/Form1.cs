@@ -255,14 +255,10 @@ namespace Wordpad_Roggia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (ColorDialog colorDialog = new ColorDialog())
-            {
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    richTextBox1.SelectionColor = colorDialog.Color;
-                    btnColorText.FlatAppearance.BorderColor = colorDialog.Color;
-                }
-            }
+            ColorDialog fnt = new ColorDialog();
+            if (fnt.ShowDialog() == DialogResult.OK)
+                richTextBox1.ForeColor = fnt.Color;
+        
         }
         private void chkItalic_CheckedChanged(object sender, EventArgs e)
         {
@@ -348,6 +344,28 @@ namespace Wordpad_Roggia
             richTextBox1.SelectedText = System.DateTime.Now.ToString();
         }
 
-        
+        private void btnMarkedText_Click(object sender, EventArgs e)
+        {
+            ColorDialog fnt = new ColorDialog();
+            if (fnt.ShowDialog() == DialogResult.OK)
+                richTextBox1.SelectionBackColor = fnt.Color;
+        }
+
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ZoomFactor += 2.0f;
+        }
+
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                richTextBox1.ZoomFactor -= 2.0f;
+            }
+            catch (Exception) 
+            {
+                MessageBox.Show("Livello minimo di grandezza");
+            }
+        }
     }
 }

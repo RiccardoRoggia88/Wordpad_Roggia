@@ -158,5 +158,20 @@
   <ItemGroup>
     <None Include="Resources\BackgroundColor_16x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-in16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-out16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomIn16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomOut16x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
